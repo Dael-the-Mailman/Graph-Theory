@@ -1,6 +1,6 @@
 #include <iostream>
 #include <unordered_set>
-#include <stack>
+#include <queue>
 
 using namespace std;
 
@@ -20,7 +20,7 @@ public:
     }
     void addEdge(int, int);
     void printGraph();
-    void DFS(int start);
+    void BFS(int start);
 
 private:
     int numVertices;
@@ -45,16 +45,16 @@ void AdjSet::printGraph()
     }
 }
 
-void AdjSet::DFS(int start)
+void AdjSet::BFS(int start)
 {
     visited[start] = true;
-    stack<int> s;
-    s.push(start);
+    queue<int> q;
+    q.push(start);
     printf("\n DFS: %d-> ", start);
-    while (!s.empty())
+    while (!q.empty())
     {
-        start = s.top();
-        s.pop();
+        start = q.front();
+        q.pop();
         if (!visited[start])
         {
             cout << start << "-> ";
@@ -64,7 +64,7 @@ void AdjSet::DFS(int start)
         for (auto i : adj[start])
         {
             if (!visited[i])
-                s.push(i);
+                q.push(i);
         }
     }
 }
@@ -78,6 +78,6 @@ int main()
     adj.addEdge(1, 2);
     adj.addEdge(3, 4);
     adj.printGraph();
-    adj.DFS(0);
+    adj.BFS(0);
     return 0;
 }
