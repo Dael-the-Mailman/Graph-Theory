@@ -1,52 +1,21 @@
-# Read Me Template
+# Graph Theory Notes
 
-![Project Image](project-image-url)
+[![Algorithms Course - Graph Theory Tutorial from a Google Engineer](https://img.youtube.com/vi/09_LlHjoEiY/0.jpg)](https://www.youtube.com/watch?v=09_LlHjoEiY)
 
-> This is a ReadMe template to help save you time and effort.
-
----
-
-### Table of Contents
-
-You're sections headers will be used to reference location of destination.
-
-- [Description](#description)
-- [How To Use](#how-to-use)
-- [References](#references)
-- [License](#license)
-- [Author Info](#author-info)
+> YouTube tutorial from freeCodeCamp by William Fiset.
 
 ---
 
 ## Description
 
-Creating ReadMe's for your Github repository can be tedious. I hope this template can save you time and effort as well as provide you with some consistency across your projects.
+A recreation of different graph algorithms in C++, Python, and Javascript. Each folder has notes on the different algorithms that were explained in the video.
 
 #### Technologies
 
-- Technology 1
-- Technology 2
+- <img align="left" alt="C++" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/cpp/cpp.png" /> &nbsp;
 
-[Back To The Top](#read-me-template)
+- <img align="left" alt="Python" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/python/python.png" /> &nbsp;
 
----
+- <img align="left" alt="Node.js" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/nodejs/nodejs.png" /> &nbsp;
 
-## How To Use
-
-#### Installation
-
-#### API Reference
-
-```html
-<p>dummy code</p>
-```
-
-[Back To The Top](#read-me-template)
-
----
-
-## References
-
-[Back To The Top](#read-me-template)
-
----
+- <img align="left" alt="JavaScript" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png" /> &nbsp;
