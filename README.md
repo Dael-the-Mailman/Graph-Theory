@@ -1,6 +1,6 @@
 # Graph Theory Notes
 
-[![Algorithms Course - Graph Theory Tutorial from a Google Engineer](http://img.youtube.com/vi/09_LlHjoEiYE/0.jpg)](https://www.youtube.com/watch?v=09_LlHjoEiYE)
+[![Algorithms Course - Graph Theory Tutorial from a Google Engineer](https://img.youtube.com/vi/09_LlHjoEiY/0.jpg)](https://www.youtube.com/watch?v=09_LlHjoEiY)
 
 > YouTube tutorial from freeCodeCamp by William Fiset.
 
