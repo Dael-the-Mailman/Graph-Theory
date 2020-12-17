@@ -1,12 +1,11 @@
 #include <iostream>
 #include <limits>
+#include <climits>
 #include <list>
-#include <set>
 
 using namespace std;
 
 typedef pair<int, double> edge;
-typedef pair<double, int> edge2;
 
 const long double INF = numeric_limits<long double>::infinity();
 
@@ -31,41 +30,30 @@ public:
         // adj[dest].push_back(make_pair(src, weight));
     }
 
-    void dijkstra(int src)
+    void bellmanford(int src)
     {
-        set<edge2> ext;
-
         double dist[V];
+        // int prev[V];
+
         for (int i = 0; i < V; i++)
         {
             dist[i] = INF;
+            // prev[i] = INT_MAX;
         }
-        ext.insert(make_pair(0.0, src));
-        dist[src] = 0.0;
 
-        while (!ext.empty())
+        dist[src] = 0;
+
+        for (int i = 0; i < V; i++)
         {
-            edge2 tmp = *(ext.begin());
-            ext.erase(ext.begin());
-
-            int vert = tmp.second;
-
-            for (auto i = adj[vert].begin(); i != adj[vert].end(); i++)
+            for (auto x : adj[i])
             {
-                int currV = (*i).first;
-                double weight = (*i).second;
-
-                if (dist[currV] > dist[vert] + weight)
+                if (dist[x.first] > dist[i] + x.second)
                 {
-
-                    if (dist[currV] != INF)
-                    {
-                        ext.erase(ext.find(make_pair(dist[currV], currV)));
-                    }
-
-                    dist[currV] = dist[vert] + weight;
-                    ext.insert(make_pair(dist[currV], currV));
+                    dist[x.first] = dist[i] + x.second;
+                    // prev[x.first] = i;
                 }
+                if (dist[i] + x.second < dist[x.first])
+                    cout << "Graph contains a negative-weight cycle" << '\n';
             }
         }
 
@@ -99,6 +87,6 @@ int main()
     g.addEdge(6, 7, 1);
     g.addEdge(6, 8, 6);
     g.addEdge(7, 8, 7);
-    g.dijkstra(0);
+    g.bellmanford(0);
     return 0;
 }
