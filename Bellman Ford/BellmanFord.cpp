@@ -60,7 +60,7 @@ public:
         printf("List of the Shortest Distances from node %d to all other nodes:\n", src);
         for (int i = 0; i < V; i++)
         {
-            printf("\tVertex: %d\tDistance: %f\n", i, dist[i]);
+            printf("\tVertex: %d\tDistance: %.1f\n", i, dist[i]);
         }
     }
 
